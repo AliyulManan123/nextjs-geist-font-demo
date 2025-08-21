@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///project/sandbox/user-workspace/src/components/theme-provider.tsx"],"sourcesContent":["\"use client\"\n\nimport * as React from \"react\"\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\"\n\nexport function ThemeProvider({ \n  children, \n  ...props \n}: React.ComponentProps<typeof NextThemesProvider>) {\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>\n}\n"],"names":[],"mappings":";;;;AAGA;AAHA;;;AAKO,SAAS,cAAc,EAC5B,QAAQ,EACR,GAAG,OAC6C;IAChD,qBAAO,6LAAC,mJAAA,CAAA,gBAAkB;QAAE,GAAG,KAAK;kBAAG;;;;;;AACzC;KALgB","debugId":null}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///project/sandbox/user-workspace/src/components/session-provider.tsx"],"sourcesContent":["\"use client\"\n\nimport { SessionProvider as NextAuthSessionProvider } from \"next-auth/react\"\nimport { Session } from \"next-auth\"\n\ninterface SessionProviderProps {\n  children: React.ReactNode\n  session?: Session | null\n}\n\nexport function SessionProvider({ children, session }: SessionProviderProps) {\n  return (\n    <NextAuthSessionProvider session={session}>\n      {children}\n    </NextAuthSessionProvider>\n  )\n}\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAUO,SAAS,gBAAgB,EAAE,QAAQ,EAAE,OAAO,EAAwB;IACzE,qBACE,6LAAC,wIAAA,CAAA,kBAAuB;QAAC,SAAS;kBAC/B;;;;;;AAGP;KANgB","debugId":null}}]
+}
